@@ -1,0 +1,48 @@
+/*NavBar*/
+*{
+    box-shadow: border-box;
+  
+  }
+  nav {
+    height: 80px;
+  }
+  
+  #nav-item {
+    padding-right: 22px;
+    padding-left: 22px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .sign {
+    margin-left: 20px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+  
+  .navbar-brand {
+    padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .navbar-collapse {
+    padding-right: 30px;
+  }
+  
+  
+  #footer {
+    padding-top: 18px;
+  }
+  
+  .fa-brands {
+    font-size: 22px;
+    color: grey;
+  }
+  
+  .fa-brands:hover {
+    color: rgb(93, 93, 93);
+  }
+  
+  .switchToLogin{
+    padding-left: 17px;
+  }
+ 

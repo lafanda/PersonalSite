@@ -1,0 +1,155 @@
+.create-post-body {
+  margin: 55px 0;
+}
+
+.title {
+  padding: 65px 0 35px 0;
+  text-align: left;
+}
+
+.createPost-container {
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.createButton {
+  width: 75vw;
+  padding: 10px;
+  margin-top: 30px;
+  background-color: #a4a4a4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.createButton:hover {
+  width: 76vw;
+  padding: 10px;
+  margin-top: 30px;
+  background-color: #8f8f8f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.create-post-form {
+  text-align: center;
+}
+
+.create-post-title {
+  padding-left: 10px;
+  padding-top: 5px;
+  border-radius: 11px;
+  height: 50px;
+  width: 80%;
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.create-post-title::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+}
+
+.create-post-summary {
+  padding-left: 10px;
+  padding-top: 5px;
+  border-radius: 11px;
+  height: 50px;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.create-post-file {
+  margin-bottom: 20px;
+}
+
+.create-post-editor {
+  padding-top: 65px;
+  height: 80%;
+  width: 90%;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.blog-post {
+  width: 80%;
+  padding: 55px 0;
+}
+.blog-header{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.test2{
+  text-align: right;
+}
+
+.blog-post img {
+  width: 300px;
+}
+
+.post-details {
+  color: black;
+  text-decoration: none;
+  flex: 1;
+}
+.post-details:hover {
+  color: black;
+  text-decoration: none;
+  flex: 1;
+}
+
+.read-post-cover {
+  width: 95%;
+}
+
+.read-post-body {
+  margin: 65px 40px;
+}
+
+.date{
+  color: rgb(152, 152, 152);
+  font-size: 16px;
+}
+
+.summary{
+  padding: 5px;
+  border: solid;
+  border-radius: 11px;
+  border-color: #a4a4a4;
+  font-size: 18px;
+  width: 90%;
+}
+
+
+.read-post-container{
+  width: 100%;
+  border-radius: 11px;
+  border: solid;
+  border-color: #a4a4a4;
+  margin-top: 50px;
+}
+
+.backBtn{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(117, 117, 117);
+  font-size: 24px;
+  margin-left: 35px;
+  text-decoration: none;
+}
