@@ -21,7 +21,7 @@ function ReadPost() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className="outerBody">
