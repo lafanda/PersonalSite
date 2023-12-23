@@ -16,6 +16,7 @@ function About() {
       On this website, a blog that I've been working on, where you can find updates on my life and thoughts on various topic. If you're interested in following my journey, I'd love to have you along for the ride.
     </div>
   </div>
+
 </section>
 
   );

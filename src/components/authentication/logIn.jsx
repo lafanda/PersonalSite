@@ -59,7 +59,6 @@ function LogIn() {
       <div class="form">
         <h1 className="login-Header">login</h1>
         <form class="login-form">
-
           <input
             className="input"
             placeholder="&#xf0e0;"

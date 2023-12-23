@@ -3,6 +3,7 @@ import {format} from 'date-fns'
 import { Link } from "react-router-dom";
 
 function Post({_id, title, summary, content, image, createdAt}){
+  console.log(_id)
 
     return(<div className="blog-post">
                

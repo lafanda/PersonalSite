@@ -9,6 +9,7 @@ import Blog from './blog/blog';
 import ReadPost from './blog/read-post'
 import { UserContext } from '../context';
 
+
 function App() {
     const { userInfo } = useContext(UserContext);
     const email = userInfo?.email;
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path = '/' element={<Layout />}>
           <Route index element={<MainRoute />} />
+         
           <Route path = '/register' element={<Register />} />
           <Route path = '/login' element={<Login />} />
           <Route path = '/createpost' element={email === 'yazan.mmh@gmail.com' ? <CreatePost /> : <Navigate to="/" />}/>

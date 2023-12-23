@@ -11,10 +11,12 @@ const multer = require('multer');
 const uploadMiddlewear = multer({dest: 'uploads/'})
 const fs = require ('fs');
 const { log } = require('console');
+const path = require('path');
 
 
 
 const app = express();
+app.use(express.static(path.join(__dirname, '../build')));
 
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
@@ -30,7 +32,9 @@ mongoose.set('strictQuery', false);
 
 const uri = "mongodb+srv://yazanmmh:Lafanda2004@cluster0.riaw3ul.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(uri);
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
 app.post('/register', async (req, res) => {
     const { email, password } = req.body;
     try {

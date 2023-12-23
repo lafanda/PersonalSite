@@ -3,6 +3,9 @@
     box-shadow: border-box;
   
   }
+  nav {
+    height: 80px;
+  }
   
   #nav-item {
     padding-right: 22px;
