@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
@@ -25,8 +26,9 @@ const secret = "hbsdcu78364chj239784jbvdsch"
 
 
 mongoose.set('strictQuery', false);
-const uri = 'mongodb+srv://yazan:lafanda@cluster0.mgzqay3.mongodb.net/?retryWrites=true&w=majority'
 
+
+const uri = "mongodb+srv://yazanmmh:Lafanda2004@cluster0.riaw3ul.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(uri);
 
 app.post('/register', async (req, res) => {
@@ -116,13 +118,14 @@ app.get('/post', async (req,res) =>{
 
 
 app.get('/post/:id', async(req, res) =>{
+    console.log("called");
     const {id} = req.params;
     const postDoc = await Post.findById(id)
     res.json(postDoc)
 })
 
 
-app.listen(4000, function () {
+app.listen(process.env.PORT||4000, function () {
     console.log("running");
 });
 //
