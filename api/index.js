@@ -53,46 +53,46 @@ app.post('/login', async (req, res) => {
     const userDoc = await User.findOne({ email });
     if (userDoc) {
         const passOk = bcrypt.compareSync(password, userDoc.password);
-      
+
         if (passOk) {
             jwt.sign({ email, id: userDoc._id }, secret, {}, (err, token) => {
                 if (err) throw err;
                 res.cookie('token', token).json({
                     id:userDoc._id,
-                    email, 
+                    email,
                 });
             });
         } else {
-        res.status(400).json({ message: 'Wrong Password' });
+            res.status(400).json({ message: 'Wrong Password' });
 
         }
-      } else {
+    } else {
         res.status(400).json({ message: 'User Not Found' });
-      }
+    }
 
 });
 
 app.get('/profile', (req, res) => {
     const { token } = req.cookies;
-  
+
     if (!token) {
-      return res.status(401).json({ message: 'Unauthorized' });
+        return res.status(401).json({ message: 'Unauthorized' });
     }
-  
+
     jwt.verify(token, secret, (err, info) => {
-      if (err) {
-        // Handle JWT verification errors
-        if (err.name === 'TokenExpiredError') {
-          return res.status(401).json({ message: 'Token expired' });
-        } else {
-          return res.status(401).json({ message: 'Invalid token' });
+        if (err) {
+            // Handle JWT verification errors
+            if (err.name === 'TokenExpiredError') {
+                return res.status(401).json({ message: 'Token expired' });
+            } else {
+                return res.status(401).json({ message: 'Invalid token' });
+            }
         }
-      }
-  
-      res.json(info);
+
+        res.json(info);
     });
-  });
-  
+});
+
 
 app.post('/logout', (req, res) => {
     res.cookie('token', '').json('ok');
@@ -133,4 +133,3 @@ app.listen(process.env.PORT||4000, function () {
     console.log("running");
 });
 //
-
